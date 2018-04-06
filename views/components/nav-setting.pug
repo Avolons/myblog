@@ -1,0 +1,13 @@
+.nav-setting
+    .ui.buttons
+        .ui.floating.dropdown.button
+            i.icon.bars
+            .menu
+                -if (user)
+                    a( href="/posts?author="+user._id ).item 个人主页
+                    .divider
+                    a(href="/posts/create").item 发表文章
+                    a(href="/signout").item 登出
+                -else
+                    a(href="/signin").item 登录
+                    a(href="/signup").item 注册
